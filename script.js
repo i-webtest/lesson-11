@@ -29,14 +29,14 @@ btn.addEventListener("click", function () {
 
 document.getElementById("e_btn").style.display = "none";
 
-function myFunc() {
+function circleSize() {
   rangeSpan.textContent = rangeElem.value + "%";
   circle.style.width = rangeElem.value + "%";
   circle.style.height = rangeElem.value + "%";
 }
-myFunc();
+circleSize();
 
-rangeElem.addEventListener("input", myFunc); //{
+rangeElem.addEventListener("input", circleSize); //{
 // let inputRange = document.getElementById("range").value;
 // document.getElementById("circle").style.width = rangeElem.value;
 // circle.style.width = rangeElem.value + "%";
