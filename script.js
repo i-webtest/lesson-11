@@ -29,15 +29,22 @@ btn.addEventListener("click", function () {
 
 document.getElementById("e_btn").style.display = "none";
 
-rangeElem.addEventListener("input", function () {
-  // let inputRange = document.getElementById("range").value;
-  // document.getElementById("circle").style.width = rangeElem.value;
+function myFunc() {
+  rangeSpan.textContent = rangeElem.value + "%";
   circle.style.width = rangeElem.value + "%";
   circle.style.height = rangeElem.value + "%";
-  // document.getElementById("circle").style.width = range;
-  rangeSpan.textContent = rangeElem.value + "%";
-});
-rangeSpan.textContent = rangeElem.value + "%";
+}
+myFunc();
+
+rangeElem.addEventListener("input", myFunc); //{
+// let inputRange = document.getElementById("range").value;
+// document.getElementById("circle").style.width = rangeElem.value;
+// circle.style.width = rangeElem.value + "%";
+// circle.style.height = rangeElem.value + "%";
+// document.getElementById("circle").style.width = range;
+// rangeSpan.textContent = rangeElem.value + "%";
+// });
+// rangeSpan.textContent = rangeElem.value + "%";
 
 console.log(rangeSpan);
 console.log(window.getComputedStyle(circle).width);
